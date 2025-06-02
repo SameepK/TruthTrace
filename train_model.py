@@ -26,12 +26,12 @@ training_args = TrainingArguments(
 )
 
 
-accurany_metric = load_metric("accuracy")
+accuracy_metric = load_metric("accuracy")
 
 def compute_metrics(eval_pred):
     logits, labels = eval_pred
     preds = np.argmax(logits, axis=1)
-    return accurany_metric.compute(predictions=preds, references=labels)
+    return accuracy_metric.compute(predictions=preds, references=labels)
 
 trainer = Trainer(
     model=model,
