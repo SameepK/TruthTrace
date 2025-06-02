@@ -192,3 +192,19 @@ cython_debug/
 #  refer to https://docs.cursor.com/context/ignore-files
 .cursorignore
 .cursorindexingignore
+
+
+# Hugging Face model and tokenizer files
+*.safetensors
+*.json
+*.txt
+
+# VS Code workspace folder
+.vscode/
+
+# Additional local dev artifacts
+*.log
+*.pkl
+*.pt
+*.bin
+.cache/
